@@ -9,7 +9,7 @@ import ScrollableChat from './ScrollableChat';
 import '../App.css'
 import io from 'socket.io-client';
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chatapp-cdo0nah5e-santhosh3.vercel.app/";
 let socket,selectedChatCompare
 
 function SingleChat({ fetchAgain, setFetchAgain }) {
@@ -36,7 +36,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
       socket.emit('stop typing',selectedChat._id)
       try {
         setNewMessage("");
-        const response = await fetch('http://localhost:5000/sendMessage', {
+        const response = await fetch('https://chatapp-cdo0nah5e-santhosh3.vercel.app/sendMessage', {
           method : 'POST',
           headers: {
            'Authorization': `Bearer ${user.token}`,

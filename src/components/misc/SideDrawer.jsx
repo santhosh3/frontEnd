@@ -74,7 +74,7 @@ function SideDrawer() {
   async function accessChat(userId){
     try {
       setLoadingChat(true);
-      const {data} = await axios.post(`http://localhost:5000/`,{userId},{
+      const {data} = await axios.post(`https://chatapp-cdo0nah5e-santhosh3.vercel.app/`,{userId},{
         headers : {
           Authorization : `Bearer ${user.token}`,
           "Content-Type" : "application/json",
